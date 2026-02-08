@@ -43,6 +43,19 @@ class doublyLL :
         new_node.next = temp.next
         new_node.prev = temp
         temp.next = new_node
+
+    def deleteAtLast(self):
+        if (self.head is None):
+            print("List is empty")
+            return
+        if (self.head.next is None):
+            self.head = None
+            return
+        temp = self.head
+        while (temp.next != None):
+            temp = temp.next
+        temp.prev.next = None
+        
     
 
     def display(self):
@@ -59,5 +72,6 @@ dl.insertAtEnd(20)
 dl.insertAtEnd(30)
 dl.insertAtBig(5)
 dl.insertAtBig(2)
-dl.insertAtSP(50,6)
+dl.insertAtSP(50,5)
+dl.deleteAtLast()
 dl.display()
