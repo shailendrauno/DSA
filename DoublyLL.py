@@ -27,6 +27,8 @@ class doublyLL :
             return
         new_node.next = self.head
         self.head = new_node
+        self.head.prev = new_node
+
 
     def insertAtSP (self, data, index):
         if(index == 0):
@@ -55,8 +57,34 @@ class doublyLL :
         while (temp.next != None):
             temp = temp.next
         temp.prev.next = None
+
+    def deleteAtBig(self):
+        if(self.head is None):
+            print("List is empty")
+            return
+        if(self.head.next is None):
+            self.head = None
+            return
+        self.head = self.head.next
+        self.head.prev = None
         
-    
+    def deleteAtSP(self, idx):
+        if(idx == 0):
+            self.deleteAtBig()
+            return
+        temp = self.head
+        for i in range(idx):
+            if temp is None:
+                print("Position out of range")
+                return
+            temp = temp.next
+
+        if temp.next is not None:
+            temp.next.prev = temp.prev
+
+        if temp.prev is not None:
+         temp.prev.next = temp.next
+
 
     def display(self):
         temp = self.head
@@ -74,4 +102,6 @@ dl.insertAtBig(5)
 dl.insertAtBig(2)
 dl.insertAtSP(50,5)
 dl.deleteAtLast()
+dl.deleteAtBig()
+dl.deleteAtSP(1)
 dl.display()
