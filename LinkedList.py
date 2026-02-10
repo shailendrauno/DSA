@@ -1,14 +1,14 @@
-# Node class represents a single element of the linked list
+
 class Node:
     def __init__(self, data):
-        self.data = data      # Store data
-        self.next = None      # Pointer to the next node
+        self.data = data      
+        self.next = None      
 
 
-# LinkedList class contains all linked list operations
+
 class LinkedList:
     def __init__(self):
-        self.head = None      # Head initially points to nothing
+        self.head = None      
 
 
     # ---------------- INSERT OPERATIONS ----------------

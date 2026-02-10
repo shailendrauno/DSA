@@ -1,10 +1,7 @@
-# Importing array module
+
 import array as arr
 
-# -------------------------------------------------
-# Creating an array
-# 'i' means array of signed integers
-# -------------------------------------------------
+
 a = arr.array('i', [10, 20, 30, 40, 50])
 print("Original array:", a)
 
