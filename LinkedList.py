@@ -121,8 +121,6 @@ ll.insert_at_position(15, 1)
 
 ll.display()
 
-ll.delete_from_beginning()
-ll.delete_from_end()
-ll.delete_from_position(1)
+
 
 ll.display()  
