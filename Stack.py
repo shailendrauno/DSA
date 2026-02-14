@@ -28,7 +28,7 @@ myStack.push('A')
 myStack.push('B')
 myStack.push('C')
 
-print("Stack: ", myStack.stack)
+print("Stack: is", myStack.stack)
 print("Pop: ", myStack.pop())
 print("Stack after Pop: ", myStack.stack)
 print("Peek: ", myStack.peek())
