@@ -11,7 +11,11 @@ def preOrder(root):
         preOrder(root.left)
         preOrder(root.right)
 
-
+def inOrder(root):
+    if(root != None):
+        inOrder(root.left)
+        print(root.data, end= " ")
+        inOrder(root.right)
 
 
 
