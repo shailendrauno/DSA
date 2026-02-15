@@ -17,11 +17,17 @@ def inOrder(root):
         print(root.data, end= " ")
         inOrder(root.right)
 
+# def postOrder(root):
+#     if(root != None):
+#         postOrder(root.left)
+#         postOrder(root.right)
+#         print(root.data, end= " ")
+
 def postOrder(root):
     if(root != None):
+        print(root.data, end=" ")
         postOrder(root.left)
         postOrder(root.right)
-        print(root.data, end= " ")
 
 root = Node(1)
 root.left = Node(2)
@@ -38,6 +44,6 @@ root.right.left.left = Node(12)
 root.right.left.right = Node(13)
 root.right.right.left = Node(14)
 root.right.right.right = Node(15)
-preOrder(root)
-inOrder(root)
+# preOrder(root)
+# inOrder(root)
 postOrder(root)
