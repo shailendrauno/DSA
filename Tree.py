@@ -17,7 +17,11 @@ def inOrder(root):
         print(root.data, end= " ")
         inOrder(root.right)
 
-
+def postOrder(root):
+    if(root != None):
+        postOrder(root.left)
+        postOrder(root.right)
+        print(root.data, end= " ")
 
 root = Node(1)
 root.left = Node(2)
