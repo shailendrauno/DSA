@@ -35,4 +35,12 @@ class Graph:
         else:
             print("inavalid input")
     def print(self):
-        
+        for row in self.mat:
+            print(' '.join(map(str, row)))
+G = Graph(5)
+G.add_edge(1,3)
+G.add_edge(0,5)
+G.add_edge(2,3)
+G.add_edge(9,6)
+G.add_edge(4,5)
+G.print()
