@@ -20,11 +20,18 @@ class Graph:
                 print(v, end=" -> ")
                 visited[v] = True
             
-            for i in (self.size - 1):
+            for i in range (self.size-1):
                 if self.mat[v][i] == 1 and visited[i] == False:
                     stack.append(i)
 
 
-
+g = Graph(6)
+g.add_edge(0,1)
+g.add_edge(0,2)
+g.add_edge(2,3)
+g.add_edge(2,4)
+g.add_edge(3,5)
+g.add_edge(4,5)
+g.dfs(0)
          
              
